@@ -20,7 +20,7 @@
       @csrf
     <input class="controls" type="text" name="ven_cantidad" id="ven_cantidad" value="{{$ventas->ven_cantidad}}" placeholder="Ingrese Cantidad">
     <input class="controls" type="text" name="ven_detalle" id="ven_detalle" value="{{$ventas->ven_detalle}}" placeholder="Ingrese Detalle">
-    <input class="controls" type="text" name="ven_fecha" id="ven_fecha"  value="{{$ventas->ven_fecha}}" placeholder="Ingrese Fecha">
+    <input class="controls" type="date" name="ven_fecha" id="ven_fecha"  value="{{$ventas->ven_fecha}}" placeholder="Ingrese Fecha">
     <input class="controls" type="text" name="ven_precio" id="ven_precio" value="{{$ventas->ven_precio}}" placeholder="Ingrese Precio">
    <button class="btn btn-info">Editar
    .</button>

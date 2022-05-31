@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="bg-dark text-white">Usuarios</h1>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registrarse') }}</div>
+                <div class="card-header">{{ __('Crear Usuario') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{route('usuarios.store')}}">
                         @csrf
 
                         <div class="form-group row">
@@ -81,7 +82,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrarse') }}
+                                    {{ __('Crear') }}
                                 </button>
                             </div>
                         </div>

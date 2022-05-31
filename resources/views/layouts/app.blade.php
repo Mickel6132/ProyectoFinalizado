@@ -19,27 +19,38 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="" style="background: #8B8BA7">
+
+
+<style>
+    #img{
+
+        background-image: url("https://d6scj24zvfbbo.cloudfront.net/710e1df8432290b7021c40a519d02eae/200000017-db315dc288/fondo%20real.jpg?ph=fb2e822fdb");
+    }
+</style>
+
+<body class="" id="img">
+<nav class="" style="background:#0f0f0f">
 
 
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background: #676787">
+        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background: #E5E5E5">
             <div class="container" >
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
-             Venta de componentes informaticos
+                <a class="navbar-brand text-dark" href="{{ url('/') }}">
+                  <img src="https://hiraoka.com.pe/media/mageplaza/blog/post/q/u/qu_es_una_tarjeta_gr_fica_y_como_funciona.jpg" width="75">
+      𝙑𝙚𝙣𝙩𝙖 𝙙𝙚 𝙘𝙤𝙢𝙥𝙤𝙣𝙚𝙣𝙩𝙚𝙨 𝙞𝙣𝙛𝙤𝙧𝙢𝙖́𝙩𝙞𝙘𝙤𝙨
                 </a>
 
                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-  <div  class="collapse navbar-collapse" style="margin-left: 41%; ">
+  <div  class="collapse navbar-collapse" style="margin-left: 30%; ">
     <div class="navbar-nav">
 
      @guest
      @else
     
-       <a class="btn btn-dark text-white" href="">Usuarios</a> &nbsp
+       <a class="btn btn-dark text-white" href="{{route('usuarios')}}">Usuarios</a> &nbsp
 
       <a class="btn btn-dark text-white" href="{{route('clientes')}}">Clientes</a> &nbsp
 
@@ -49,6 +60,7 @@
 
       <a class="btn btn-dark text-white" href="{{route('facturas.index')}}">Facturas</a> &nbsp
 
+    
     
      @endguest
 

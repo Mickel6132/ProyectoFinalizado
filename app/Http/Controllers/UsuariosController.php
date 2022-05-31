@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Componentes;
+use App\User;
 use Illuminate\Http\Request;
-use App\Clientes;
 
-class ComponenteController extends Controller
+class UsuariosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,15 +13,13 @@ class ComponenteController extends Controller
      */
     public function index()
     {
-              
-        $componentes=Componentes::all();
-        $clientes=Clientes::all();
-        return view('componentes.index')
-        ->with('componentes',$componentes)
-        ->with('clientes',$clientes);
-        ;
-         
-    }
+              $usuarios=User::all();
+
+          return view('usuarios.index')
+          ->with('usuarios',$usuarios);
+      
+    
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -32,8 +28,7 @@ class ComponenteController extends Controller
      */
     public function create()
     {
-        $clientes=Clientes::all();
-          return view('componentes.create')->with('clientes',$clientes);
+         return view('usuarios.create');
     }
 
     /**
@@ -44,10 +39,9 @@ class ComponenteController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data=$request->all();
-        Componentes::create($data);
-        return redirect(route('componentes'));
+              $data=$request->all();
+        User::create($data);
+        return redirect(route('usuarios'));
     }
 
     /**
@@ -69,9 +63,9 @@ class ComponenteController extends Controller
      */
     public function edit($id)
     {
-        $componentes=Componentes::find($id);
-        return view('componentes.edit')
-        ->with('componentes',$componentes);
+              $usuarios=User::find($id);
+        return view('usuarios.edit')
+        ->with('usuarios',$usuarios);
     }
 
     /**
@@ -84,10 +78,10 @@ class ComponenteController extends Controller
     public function update(Request $request, $id)
     {
         
-            $componentes=Componentes::find($id);
+            $usuarios=User::find($id);
 
-        $componentes->update($request->all());
-        return redirect(route('componentes')); 
+        $usuarios->update($request->all());
+        return redirect(route('usuarios')); 
     }
 
     /**
@@ -98,7 +92,7 @@ class ComponenteController extends Controller
      */
     public function destroy($id)
     {
-              Componentes::destroy($id);
-        return redirect(route('componentes'));
+             User::destroy($id);
+        return redirect(route('usuarios'));
     }
 }

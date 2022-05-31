@@ -23,6 +23,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/usuarios', 'UsuariosController@index')->name('usuarios');
+
+Route::get('/usuarios/create','UsuariosController@create')->name('usuarios.create');
+
+Route::post('/usuarios/store','UsuariosController@store')->name('usuarios.store');
+
+Route::get('/usuarios/edit/{usu_id}','UsuariosController@edit')->name('usuarios.edit');
+
+Route::post('/usuarios/update/{usu_id}','UsuariosController@update')->name('usuarios.update');
+
+Route::post('/usuarios/destroy/{cli_id}','UsuariosController@destroy')->name('usuarios.destroy');
 
 Route::get('/clientes', 'ClienteController@index')->name('clientes');
 
@@ -61,3 +72,11 @@ Route::post('/ventas/update/{ven_id}','VentasController@update')->name('ventas.u
 Route::post('/ventas/destroy/{ven_id}','VentasController@destroy')->name('ventas.destroy');
 
 Route::resource('/facturas', 'FacturasController');
+
+Route::post('/facturas.detalle', 'FacturasController@detalle')->name('factura.detalle');
+
+Route::post('/factura/search', 'FacturasController@index')->name('factura.search');
+
+Route::get('/facturas.pdf/{fac_id}','FacturasController@facturas_pdf')->name('facturas.pdf');
+
+

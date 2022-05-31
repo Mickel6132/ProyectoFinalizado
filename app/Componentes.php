@@ -9,5 +9,5 @@ class Componentes extends Model
        public $timestamps=false;
     protected $table='componentes';
     protected $primaryKey='comp_id';
-    protected $fillable=['comp_nombre','comp_cantidad','comp_detalle','comp_precio',];
+    protected $fillable=['cli_id','comp_nombre','comp_cantidad','comp_detalle','comp_precio',];
 }

@@ -11,17 +11,18 @@
 
 	
 <th style="text-align: center">#</th>
-<th style="text-align: center">Nombre</th>
+<th style="text-align: center">Cliente</th>
 <th style="text-align: center">Cantidad</th>
 <th style="text-align: center">Detalle</th>
 <th style="text-align: center">Precio</th>
 
 
 @foreach($componentes as $comp)
+
 <tr>
 
 <td style="text-align: center">{{$loop->iteration}}</td>
-<td style="text-align: center">{{$comp->comp_nombre}}</td>
+<td style="text-align: center">{{$comp->cli_id}}</td>
 <td style="text-align: center">{{$comp->comp_cantidad}}</td>
 <td style="text-align: center">{{$comp->comp_detalle}}</td>
 <td style="text-align: center">{{$comp->comp_precio}}</td>

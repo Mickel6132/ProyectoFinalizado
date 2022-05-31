@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col-md-12">
         <div>
-<h2 class="text-white col-md-3" style="background:#5E5ED5">Crear Componentes</h2>
+<h2 class="text-white col-md-3" style="background:black">Crear Componentes</h2>
 </div>
 <div class="container">
     <div class="row justify-content-center">
@@ -17,10 +17,15 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="comp_nombre" class="col-md-4 col-form-label text-md-right">Nombre</label>
+                            <label for="" class="col-md-4 col-form-label text-md-right">Cliente</label>
 
                             <div class="col-md-6">
-                                <input id="comp_nombre" type="text" class="form-control @error('comp_nombre') is-invalid @enderror" name="comp_nombre" value="{{ old('comp_nombre') }}" required autocomplete="comp_nombre" autofocus>
+
+                                <select name="cli_id" id="cli_id" class="form-control ">
+                                    @foreach($clientes as $cli)}
+                                    <option value="{{$cli->cli_id}}">{{$cli->cli_nombre}}</option>
+                                    @endforeach
+                                </select>
 
                                 @error('comp_nombre')
                                     <span class="invalid-feedback" role="alert">
@@ -74,12 +79,7 @@
                             </div>
                         </div>
 
-                       
-
-
-                         
-
-                        <div class="form-group row mb-0">
+                       <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     Crear

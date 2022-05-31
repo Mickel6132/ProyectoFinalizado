@@ -15,6 +15,7 @@ class VentasTable extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id('ven_id');
+            
             $table->string('ven_cantidad');
             $table->string('ven_detalle');
             $table->datetime('ven_fecha');
