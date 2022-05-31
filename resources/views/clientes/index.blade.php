@@ -20,14 +20,14 @@
 @foreach($clientes as $cli)
 <tr>
 
-<td style="text-align: center">{{$loop->iteration}}</td>
-<td style="text-align: center">{{$cli->cli_nombre}}</td>
-<td style="text-align: center">{{$cli->cli_apellido}}</td>
-<td style="text-align: center">{{$cli->cli_direccion}}</td>
-<td style="text-align: center">{{$cli->cli_telefono}}</td>
-<td style="text-align: center">{{$cli->cli_cedula}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$loop->iteration}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$cli->cli_nombre}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$cli->cli_apellido}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$cli->cli_direccion}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$cli->cli_telefono}}</td>
+<td style="text-align: center" class="table-light text-dark">{{$cli->cli_cedula}}</td>
 
-<td>
+<td class="table-light text-dark">
 
 	<div class="row">
 		<ul></ul>

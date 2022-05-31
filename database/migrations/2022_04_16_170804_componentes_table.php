@@ -16,7 +16,6 @@ class ComponentesTable extends Migration
         Schema::create('componentes', function (Blueprint $table) {
             $table->id('comp_id');
             $table->foreignId('cli_id')->references('cli_id')->on('clientes');
-            $table->string('comp_nombre');
             $table->string('comp_cantidad');
             $table->string('comp_detalle');
             $table->string('comp_precio');

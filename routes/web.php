@@ -59,17 +59,17 @@ Route::post('/componentes/update/{comp_id}','ComponenteController@update')->name
 
 Route::post('/componentes/destroy/{comp_id}','ComponenteController@destroy')->name('componentes.destroy');
 
-Route::get('/ventas', 'VentasController@index')->name('ventas');
+Route::get('/categoria', 'CategoriaController@index')->name('categoria');
 
-Route::get('/ventas/create','VentasController@create')->name('ventas.create');
+Route::get('/categoria/create','CategoriaController@create')->name('categoria.create');
 
-Route::post('/ventas/store','VentasController@store')->name('ventas.store');
+Route::post('/categoria/store','CategoriaController@store')->name('categoria.store');
 
-Route::get('/ventas/edit/{ven_id}','VentasController@edit')->name('ventas.edit');
+Route::get('/categoria/edit/{cat_id}','CategoriaController@edit')->name('categoria.edit');
 
-Route::post('/ventas/update/{ven_id}','VentasController@update')->name('ventas.update');
+Route::post('/categoria/update/{cat_id}','CategoriaController@update')->name('categoria.update');
 
-Route::post('/ventas/destroy/{ven_id}','VentasController@destroy')->name('ventas.destroy');
+Route::post('/categoria/destroy/{cat_id}','CategoriaController@destroy')->name('categoria.destroy');
 
 Route::resource('/facturas', 'FacturasController');
 

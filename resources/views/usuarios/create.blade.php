@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="bg-dark text-white">Usuarios</h1>
+<div class="container">
+    <div class="col-md-12">
+        <div>
+<h2 class="text-white col-md-3" style="background:black">Crear Usuarios</h2>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -46,7 +49,7 @@
                             <label for="usu_cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
 
                             <div class="col-md-6">
-                                <input id="usu_cedula" type="usu_cedula" class="form-control @error('usu_cedula') is-invalid @enderror" name="usu_cedula" value="{{ old('usu_cedula') }}" required autocomplete="usu_cedula">
+                                <input id="usu_cedula" type="number" class="form-control @error('usu_cedula') is-invalid @enderror" name="usu_cedula" value="{{ old('usu_cedula') }}" required autocomplete="usu_cedula">
 
                                 @error('usu_cedula')
                                     <span class="invalid-feedback" role="alert">

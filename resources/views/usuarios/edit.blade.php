@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="bg-dark text-white">Editar Clientes</h1>
+<div class="container">
+    <div class="col-md-12">
+        <div>
+<h2 class="text-white col-md-3" style="background:black">Editar Usuarios</h2>
 <form action="{{route('usuarios.update',$usuarios->usu_id)}}" method="POST">
     @csrf
 
@@ -45,7 +48,7 @@
                             <label for="usu_cedula" class="col-md-4 col-form-label text-md-right">Editar Cedula</label>
 
                             <div class="col-md-6">
-                                <input id="usu_cedula" type="text" class="form-control @error('usu_cedula') is-invalid @enderror" name="usu_cedula" value="{{$usuarios->usu_cedula}}" required autocomplete="usu_cedula" autofocus>
+                                <input id="usu_cedula" type="number" class="form-control @error('usu_cedula') is-invalid @enderror" name="usu_cedula" value="{{$usuarios->usu_cedula}}" required autocomplete="usu_cedula" autofocus>
 
                                 @error('usu_cedula')
                                     <span class="invalid-feedback" role="alert">

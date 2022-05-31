@@ -19,8 +19,7 @@ class CreateFacturaTable extends Migration
             $table->string('fac_no');
             $table->date('fac_fecha');
             $table->float('fac_total');
-            $table->float('fac_iva');
-              $table->string('fac_tipo_pago');//trasnferencia efectivo tarjeta
+            $table->float('fac_iva');//trasnferencia efectivo tarjeta
            $table->float('fac_descuento');
             $table->string('fac_observaciones');
             $table->integer('fac_estado');

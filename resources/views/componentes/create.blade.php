@@ -39,7 +39,7 @@
                             <label for="comp_cantidad" class="col-md-4 col-form-label text-md-right">Cantidad</label>
 
                             <div class="col-md-6">
-                                <input id="comp_cantidad" type="comp_cantidad" class="form-control @error('comp_cantidad') is-invalid @enderror" name="comp_cantidad" value="{{ old('comp_cantidad') }}" required autocomplete="comp_cantidad">
+                                <input id="comp_cantidad" type="number" class="form-control @error('comp_cantidad') is-invalid @enderror" name="comp_cantidad" value="{{ old('comp_cantidad') }}" required autocomplete="comp_cantidad">
 
                                 @error('comp_cantidad')
                                     <span class="invalid-feedback" role="alert">
@@ -69,7 +69,7 @@
                             <label for="comp_precio" class="col-md-4 col-form-label text-md-right">Precio</label>
 
                             <div class="col-md-6">
-                                <input id="comp_precio" type="comp_precio" class="form-control @error('comp_precio') is-invalid @enderror" name="comp_precio" value="{{ old('comp_precio') }}" required autocomplete="comp_precio">
+                                <input id="comp_precio" type="number" class="form-control @error('comp_precio') is-invalid @enderror" name="comp_precio" value="{{ old('comp_precio') }}" required autocomplete="comp_precio">
 
                                 @error('comp_precio')
                                     <span class="invalid-feedback" role="alert">

@@ -48,7 +48,7 @@ if (isset($factura)) {
         </select>  
         <p>  
  <div class="form-floating mb-3">
-  <input type="text" value="{{$fac_no}}" class="form-control" id="fac_no" name="fac_no" placeholder="">
+  <input type="number" value="{{$fac_no}}" class="form-control" id="fac_no" name="fac_no" placeholder="">
   <label for="floatingInput">Numero de Factura</label>
 </div>
 <div class="form-floating mb-3">
@@ -56,11 +56,11 @@ if (isset($factura)) {
   <label for="floatingInput"> Fecha</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" value="{{$fac_iva}}" class="form-control" id="fac_iva" name="fac_iva" placeholder="">
+  <input type="number" value="{{$fac_iva}}" class="form-control" id="fac_iva" name="fac_iva" placeholder="">
   <label for="floatingInput">Iva</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" value="{{$fac_descuento}}" id="fac_descuento" name="fac_descuento" placeholder="">
+  <input type="number" class="form-control" value="{{$fac_descuento}}" id="fac_descuento" name="fac_descuento" placeholder="">
   <label for="floatingInput">Descuento</label>
 </div>
 <div class="form-floating mb-3">
@@ -68,11 +68,11 @@ if (isset($factura)) {
   <label for="floatingInput">Observaciones</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" value="{{$fac_estado}}" class="form-control" id="fac_estado" name="fac_estado" placeholder="">
+  <input type="number" value="{{$fac_estado}}" class="form-control" id="fac_estado" name="fac_estado" placeholder="">
   <label for="floatingInput">Estado</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" value="{{$fac_total}}" class="form-control" id="fac_total" name="fac_total" placeholder="">
+  <input type="number" value="{{$fac_total}}" class="form-control" id="fac_total" name="fac_total" placeholder="">
   <label for="floatingInput">Total</label>
 </div>
 <div class="d-grid gap-2 col-2 mx-auto">

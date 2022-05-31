@@ -2,7 +2,10 @@
 
 @section('content')
 
-<h1 class="bg-dark text-white">Crear Clientes</h1>
+<div class="container">
+    <div class="col-md-12">
+        <div>
+<h2 class="text-white col-md-3" style="background:black">Crear Cliente</h2>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -61,7 +64,7 @@
                             <label for="cli_telefono" class="col-md-4 col-form-label text-md-right">Telefono</label>
 
                             <div class="col-md-6">
-                                <input id="cli_telefono" type="cli_telefono" class="form-control @error('cli_telefono') is-invalid @enderror" name="cli_telefono" value="{{ old('cli_telefono') }}" required autocomplete="cli_telefono">
+                                <input id="cli_telefono" type="number" class="form-control @error('cli_telefono') is-invalid @enderror" name="cli_telefono" value="{{ old('cli_telefono') }}" required autocomplete="cli_telefono">
 
                                 @error('cli_telefono')
                                     <span class="invalid-feedback" role="alert">
@@ -75,7 +78,7 @@
                             <label for="cli_cedula" class="col-md-4 col-form-label text-md-right">Cedula</label>
 
                             <div class="col-md-6">
-                                <input id="cli_cedula" type="cli_cedula" class="form-control @error('cli_cedula') is-invalid @enderror" name="cli_cedula" value="{{ old('cli_cedula') }}" required autocomplete="cli_cedula">
+                                <input id="cli_cedula" type="number" class="form-control @error('cli_cedula') is-invalid @enderror" name="cli_cedula" value="{{ old('cli_cedula') }}" required autocomplete="cli_cedula">
 
                                 @error('cli_cedula')
                                     <span class="invalid-feedback" role="alert">

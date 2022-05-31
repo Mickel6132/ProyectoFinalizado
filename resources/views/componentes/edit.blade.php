@@ -17,7 +17,7 @@
          <label for="comp_nombre" class="col-md-4 col-form-label text-md-right">Editar nombre</label>
 
                <div class="col-md-6">
-                 <input id="comp_nombre" type="text" class="form-control @error('comp_nombre') is-invalid @enderror" name="comp_nombre" value="{{$componentes->comp_nombre}}" required autocomplete="comp_nombre" autofocus>
+                 <input id="" type="text" class="form-control @error('comp_nombre') is-invalid @enderror" name="comp_nombre" value="{{$componentes->comp_nombre}}" required autocomplete="comp_nombre" autofocus>
 
                                 @error('comp_nombre')
                                     <span class="invalid-feedback" role="alert">

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Ventas;
 use Illuminate\Http\Request;
+use App\Categoria;
 
-class VentasController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class VentasController extends Controller
      */
     public function index()
     {
-          $ventas=Ventas::all();
-          return view('ventas.index')
-          ->with('ventas',$ventas);
-         
+        $categoria=Categoria::all();
+
+          return view('categoria.index')
+          ->with('categoria',$categoria);
     }
 
     /**
@@ -27,7 +27,7 @@ class VentasController extends Controller
      */
     public function create()
     {
-         return view('ventas.create');
+              return view('categoria.create');
     }
 
     /**
@@ -38,10 +38,9 @@ class VentasController extends Controller
      */
     public function store(Request $request)
     {
-
-          $data=$request->all();
-        Ventas::create($data);
-        return redirect(route('ventas'));
+           $data=$request->all();
+        Categoria::create($data);
+        return redirect(route('categoria'));
     }
 
     /**
@@ -63,9 +62,9 @@ class VentasController extends Controller
      */
     public function edit($id)
     {
-             $ventas=Ventas::find($id);
-        return view('ventas.edit')
-        ->with('ventas',$ventas);
+                $categoria=Categoria::find($id);
+        return view('categoria.edit')
+        ->with('categoria',$categoria);
     }
 
     /**
@@ -77,11 +76,10 @@ class VentasController extends Controller
      */
     public function update(Request $request, $id)
     {
+          $categoria=Categoria::find($id);
 
-         $ventas=Ventas::find($id);
-
-        $ventas->update($request->all());
-        return redirect(route('ventas')); 
+        $categoria->update($request->all());
+        return redirect(route('categoria')); 
     }
 
     /**
@@ -92,7 +90,7 @@ class VentasController extends Controller
      */
     public function destroy($id)
     {
-          Ventas::destroy($id);
-        return redirect(route('ventas'));
+          Categoria::destroy($id);
+        return redirect(route('categoria'));
     }
 }
