@@ -15,14 +15,14 @@
 </head>
 <body>
   <section class="form-register">
-    <h4>Editar Categoria</h4>
-    <form method="POST" action="{{route('categoria.update',$categoria->cat_id)}}">
+    <h4 class="text-dark">Editar Categoria</h4>
+    <form method="POST" class="text-dark" action="{{route('categoria.update',$categoria->cat_id)}}">
       @csrf
       Nombre
-    <input class="controls" type="text" name="cat_nombre" id="cat_nombre" value="{{$categoria->cat_nombre}}" placeholder="">
+    <input class="controls" type="text" name="cat_nombre" id="cat_nombre" required="" value="{{$categoria->cat_nombre}}" placeholder="">
    
    <button class="btn btn-info">Editar
-   .</button>
+   </button>
   </section>
 
 </div>

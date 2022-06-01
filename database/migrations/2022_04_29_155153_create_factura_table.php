@@ -22,7 +22,7 @@ class CreateFacturaTable extends Migration
             $table->float('fac_iva');//trasnferencia efectivo tarjeta
            $table->float('fac_descuento');
             $table->string('fac_observaciones');
-            $table->integer('fac_estado');
+            $table->integer('fac_estado')->default(1);
         });
     }
 

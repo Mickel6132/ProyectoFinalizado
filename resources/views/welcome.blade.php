@@ -81,8 +81,10 @@
             @endif
 
             <div class="content">
+                <img src="https://images.vexels.com/media/users/3/157297/isolated/preview/e30a80459d7b3a07c2a659c32437acf7-icono-de-marketing-de-computadora.png" width="280">
+                      <h1 class="text-white">𝐓𝐞𝐜𝐧𝐨𝐂𝐨𝐦𝐩𝐨𝐧𝐞𝐧𝐭</h1>
                 <div class="title m-b-md">
-                    Laravel
+                 
                 </div>
             
                 <div class="links">

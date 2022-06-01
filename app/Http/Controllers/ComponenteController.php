@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Componentes;
 use Illuminate\Http\Request;
 use App\Clientes;
-
+use App\Categoria;
+use DB;
 class ComponenteController extends Controller
 {
     /**
@@ -16,11 +17,15 @@ class ComponenteController extends Controller
     public function index()
     {
               
-        $componentes=Componentes::all();
-        $clientes=Clientes::all();
+        // $componentes=Componentes::all();
+        // $clientes=Clientes::all();
+        // $categoria=Categoria::all();
+        $componentes=DB::select("SELECT * FROM componentes t
+              JOIN clientes c ON t.cli_id=c.cli_id
+              JOIN categoria a ON t.cat_id=a.cat_id
+                ");
         return view('componentes.index')
         ->with('componentes',$componentes)
-        ->with('clientes',$clientes);
         ;
          
     }
@@ -33,7 +38,10 @@ class ComponenteController extends Controller
     public function create()
     {
         $clientes=Clientes::all();
-          return view('componentes.create')->with('clientes',$clientes);
+        $categoria=Categoria::all();
+          return view('componentes.create')
+          ->with('clientes',$clientes)
+          ->with('categoria',$categoria);
     }
 
     /**
@@ -70,8 +78,12 @@ class ComponenteController extends Controller
     public function edit($id)
     {
         $componentes=Componentes::find($id);
+        $clientes=Clientes::all();
+        $categoria=Categoria::all();
         return view('componentes.edit')
-        ->with('componentes',$componentes);
+        ->with('componentes',$componentes)
+        ->with('clientes',$clientes)
+        ->with('categoria',$categoria);
     }
 
     /**

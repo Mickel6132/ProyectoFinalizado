@@ -215,17 +215,11 @@ public function facturas_pdf($fac_id){
    
 
 
-   public function factura_anular ($fac_id)
-
-       {
-       DB::update("UPDATE factura SET fac_estado=2 where fac_id=$fac_id");
+   public function factura_anular($fac_id)
+    {
+        DB::update("UPDATE factura SET fac_estado=2 where fac_id=$fac_id");
         return redirect(route('factura.index'));
-        }
+    }
    
-
-   
-
-
 
 }
-

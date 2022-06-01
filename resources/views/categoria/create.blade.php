@@ -15,10 +15,14 @@
 </head>
 <body>
   <section class="form-register">
-    <h4 class="text-white">Crear Categoria</h4>
-    <form method="POST" class="text-white" action="{{route('categoria.store')}}">
+    
+    
+    <h4 class="text-dark">Crear Categoria</h4>
+
+    <form method="POST" class="text-dark" action="{{route('categoria.store')}}">
       @csrf
-    Nombre<input class="controls" type="text" name="cat_nombre" id="cat_nombre" placeholder="">
+    Nombre<input class="controls"  type="text" name="cat_nombre" id="cat_nombre" required="" placeholder="">
+
 
    <button class="btn btn-info">Crear</button>
   </section>

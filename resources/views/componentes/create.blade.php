@@ -35,6 +35,26 @@
                             </div>
                         </div>
 
+                       <div class="form-group row">
+                            <label for="" class="col-md-4 col-form-label text-md-right">Categoria</label>
+
+                            <div class="col-md-6">
+
+                                <select name="cat_id" id="cat_id" class="form-control ">
+                                    @foreach($categoria as $cat)}
+                                    <option value="{{$cat->cat_id}}">{{$cat->cat_nombre}}</option>
+                                    @endforeach
+                                </select>
+
+                                @error('cat_nombre')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
                         <div class="form-group row">
                             <label for="comp_cantidad" class="col-md-4 col-form-label text-md-right">Cantidad</label>
 
