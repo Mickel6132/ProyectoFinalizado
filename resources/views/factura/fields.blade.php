@@ -48,32 +48,39 @@ if (isset($factura)) {
         </select>  
         <p>  
  <div class="form-floating mb-3">
+    <label for="floatingInput">Numero de Factura</label>
   <input type="number" value="{{$fac_no}}" class="form-control" id="fac_no" name="fac_no" placeholder="" required="">
-  <label for="floatingInput">Numero de Factura</label>
+ 
 </div>
 <div class="form-floating mb-3">
+    <label for="floatingInput"> Fecha</label>
   <input type="date" value="{{$fac_fecha}}" class="form-control" id="fac_fecha" name="fac_fecha" placeholder="" required="">
-  <label for="floatingInput"> Fecha</label>
+
 </div>
 <div class="form-floating mb-3">
+    <label for="floatingInput">Iva</label>
   <input type="number" value="{{$fac_iva}}" class="form-control" id="fac_iva" name="fac_iva" placeholder="" required="">
-  <label for="floatingInput">Iva</label>
+
 </div>
 <div class="form-floating mb-3">
+    <label for="floatingInput">Descuento</label>
   <input type="number" class="form-control" value="{{$fac_descuento}}" id="fac_descuento" name="fac_descuento" placeholder="" required="">
-  <label for="floatingInput">Descuento</label>
+
 </div>
 <div class="form-floating mb-3">
+    <label for="floatingInput" >Observaciones</label>
   <input type="text" value="{{$fac_observaciones}}" class="form-control" id="fac_observaciones" name="fac_observaciones" placeholder="" required="">
-  <label for="floatingInput" >Observaciones</label>
+ 
 </div>
 <div class="form-floating mb-3">
+    <label for="floatingInput">Estado</label>
   <input type="number" value="{{$fac_estado}}" readonly="" class="form-control" id="fac_estado" name="fac_estado" placeholder="" required="">
-  <label for="floatingInput">Estado</label>
+
 </div>
 <div class="form-floating mb-3">
+   <label for="floatingInput">Total</label>
   <input type="number" value="{{$fac_total}}" class="form-control" id="fac_total" name="fac_total" placeholder="" required="">
-  <label for="floatingInput">Total</label>
+
 </div>
 <div class="d-grid gap-2 col-2 mx-auto" >
      <button type="submit" style="background:#c0a0c3 " class="btn ">Guardar</button>
@@ -100,11 +107,11 @@ if (isset($factura)) {
       
      <td>
       <input id="fac_id" name="fac_id" value="{{$fac_id}}" type="hidden">
-       <input type="number" name="fad_cantidad" id="fad_cantidad" style="width:150px" class="form-control" >
+       <input type="number" name="fad_cantidad" id="fad_cantidad" style="width:150px" class="form-control" required="">
      </td>
      <td>
        
-      <select name="comp_id" id="comp_id" style="width: 200px" class="form-control" >
+      <select name="comp_id" id="comp_id" style="width: 200px" class="form-control" required="">
         <option value="">Componentes</option>
        @foreach($componentes  as  $comp)
         <option value="{{$comp->comp_id}}">{{$comp->comp_detalle}}</option>
@@ -113,7 +120,7 @@ if (isset($factura)) {
      
      </td>
      <td>
-       <input type="number" name="fad_vu" id="fad_vu" style="width:100px" class="form-control" >
+       <input type="number" name="fad_vu" id="fad_vu" style="width:100px" class="form-control" required="">
      </td>
      <td>
        <input type="text" value="0" name="fad_vt" id="fad_vt" style="width:100px" readonly="" class="form-control" >
