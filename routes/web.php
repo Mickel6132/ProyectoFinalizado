@@ -79,4 +79,4 @@ Route::post('/factura/search', 'FacturasController@index')->name('factura.search
 
 Route::get('/facturas.pdf/{fac_id}','FacturasController@facturas_pdf')->name('facturas.pdf');
 
-Route::post('/factura.anular/{fac_id}', 'FacturasController@anular')->name('factura.anular');
+Route::get('/factura.anular/{fac_id}', 'FacturasController@factura_anular')->name('factura.anular');

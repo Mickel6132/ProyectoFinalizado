@@ -19,7 +19,7 @@ if (isset($factura)) {
   $fac_iva=0;
   $fac_descuento=0;
   $fac_observaciones="";
-  $fac_estado="";
+  $fac_estado=1;
   $fac_total=0;
 }
 
@@ -68,7 +68,7 @@ if (isset($factura)) {
   <label for="floatingInput" >Observaciones</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="number" value="{{$fac_estado}}" class="form-control" id="fac_estado" name="fac_estado" placeholder="" required="">
+  <input type="number" value="{{$fac_estado}}" readonly="" class="form-control" id="fac_estado" name="fac_estado" placeholder="" required="">
   <label for="floatingInput">Estado</label>
 </div>
 <div class="form-floating mb-3">
@@ -100,11 +100,11 @@ if (isset($factura)) {
       
      <td>
       <input id="fac_id" name="fac_id" value="{{$fac_id}}" type="hidden">
-       <input type="number" name="fad_cantidad" id="fad_cantidad" style="width:150px" class="form-control" required="">
+       <input type="number" name="fad_cantidad" id="fad_cantidad" style="width:150px" class="form-control" >
      </td>
      <td>
        
-      <select name="comp_id" id="comp_id" style="width: 200px" class="form-control" required="">
+      <select name="comp_id" id="comp_id" style="width: 200px" class="form-control" >
         <option value="">Componentes</option>
        @foreach($componentes  as  $comp)
         <option value="{{$comp->comp_id}}">{{$comp->comp_detalle}}</option>
@@ -113,7 +113,7 @@ if (isset($factura)) {
      
      </td>
      <td>
-       <input type="number" name="fad_vu" id="fad_vu" style="width:100px" class="form-control" required="">
+       <input type="number" name="fad_vu" id="fad_vu" style="width:100px" class="form-control" >
      </td>
      <td>
        <input type="text" value="0" name="fad_vt" id="fad_vt" style="width:100px" readonly="" class="form-control" >
